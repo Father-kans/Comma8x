@@ -97,6 +97,7 @@ FINGERPRINTS = {
 
 STEER_THRESHOLD = 1.0
 
+# add bellow 3 lines
 ECU_FINGERPRINT = {
   Ecu.fwdCamera: [384, 715]  # 384 = "ASCMLKASteeringCmd", 715 = "ASCMGasRegenCmd"
 }

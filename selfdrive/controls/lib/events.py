@@ -258,8 +258,16 @@ EVENTS: Dict[int, Dict[str, Union[Alert, Callable[[Any, messaging.SubMaster, boo
 #      "WARNING: Original EON deprecated",
 #      "Device will no longer update",
 #      AlertStatus.userPrompt, AlertSize.mid,
-#      Priority.LOWER, VisualAlert.none, AudibleAlert.none, 0., 0., 15.),
+#      Priority.LOWER, VisualAlert.none, AudibleAlert.none, 0., 0., 3.),
 #  },
+
+  EventName.startupGreyPanda: {
+    ET.PERMANENT: Alert(
+      "WARNING: Grey panda is not supported.",
+      "But Kegman re-enabled it.  Enjoy.",
+      AlertStatus.userPrompt, AlertSize.mid,
+      Priority.LOWER, VisualAlert.none, AudibleAlert.none, 0., 0., 3.),
+  },
 
   EventName.invalidLkasSetting: {
     ET.PERMANENT: Alert(
