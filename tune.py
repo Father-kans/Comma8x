@@ -63,7 +63,7 @@ button_delay = 0.1
 
 kegman_kans = kegman_kans_conf()
 kegman_kans.conf['tuneGernby'] = "1"
-param = ["Kp", "Ki", "Kd", "Kf", \
+param = ["accelerationMode", "Kp", "Ki", "Kd", "Kf", \
          "steerLimitTimer", "sR_BP0", "sR_BP1", "sR_boost", "sR_time", "STOPPING_DISTANCE",
          "ONE_BAR_DISTANCE", "TWO_BAR_DISTANCE", "THREE_BAR_DISTANCE", "slowOnCurves"]
 
@@ -160,6 +160,9 @@ while True:
 
   if float(kegman_kans.conf['tuneGernby']) != 1 and float(kegman_kans.conf['tuneGernby']) != 0:
     kegman_kans.conf['tuneGernby'] = "1"
+
+  if float(kegman_kans.conf['accelerationMode']) != 0 and float(kegman_kans.conf['accelerationMode']) != 1 and float(kegman_kans.conf['accelerationMode'] != "2"):
+    kegman_kans.conf['accelerationMode'] = "1"
 
   if float(kegman_kans.conf['Kp']) < 0 and float(kegman_kans.conf['Kp']) != -1:
     kegman_kans.conf['Kp'] = "0"

@@ -145,10 +145,10 @@ class kegman_kans_conf():
       if "epsModded" not in self.config:
         self.config.update({"epsModded":""})
         self.element_updated = True
-#
-#      if "accelerationMode" not in self.config:
-#        self.config.update({"accelerationMode":"0"})
-#        self.element_updated = True
+
+      if "accelerationMode" not in self.config:
+        self.config.update({"accelerationMode":""})
+        self.element_updated = True
 
       if self.element_updated:
         print("updated")
@@ -156,7 +156,7 @@ class kegman_kans_conf():
 
     else:
       self.config = {"lastTrMode":"1", "battChargeMin":"60", "battChargeMax":"80", "wheelTouchSeconds":"18000", \
-                     "accelerationMode":"0", "battPercOff":"65", "carVoltageMinEonShutdown":"12000", \
+                     "accelerationMode":"0", "battPercOff":"65", "carVoltageMinEonShutdown":"12000", \ # add "accelerationmode":"0"
                      "brakeStoppingTarget":"0.5", "tuneGernby":"1", "AutoHold":"1", "steerLimitTimer":"2.8", \
                      "Kp":"0.162", "Ki":"0.0144", "Kd":"0.072", "Kf":"0.000072", "liveParams":"1", "deadzone":"0.0", \
                      "1barBP0":"-0.2", "2barBP0":"-0.2", "3barBP0":"-0.1", \
